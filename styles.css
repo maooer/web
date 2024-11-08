@@ -1,6 +1,5 @@
 /* 基本样式 */
 * {
-    margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
     font-family: Montserrat, NotoSansSC;
@@ -8,6 +7,7 @@
 
 /* 响应式布局 */
 body {
+    margin:0 auto;
     max-width: 600px;
     display: flex;
     flex-direction: column;
@@ -68,20 +68,32 @@ body {
 	align-content: flex-start;
 }
 .area-2-1{
-    margin-top: 20px;
+    margin-top: 30px;
     display: flex;
-    flex-direction:column;
+    gap: 10px; /* 按钮之间的间距 */
     
 }
-.but{
-    width: 80%;
-    height: 30px;
-    margin:5px 20px 5px 0;
+.but {
+    padding: 12px 20px;
+    background-color: #004646; /* 按钮背景色 */
+    color: #fff; /* 按钮文字颜色 */
+    border: none;
+    border-radius: 5px; /* 圆角 */
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
     text-align: center;
-    align-content: center;
-    background-color: #004646;
-    color: #FFF5EB;
-    font-size: .7rem;
+    transition: background-color 0.2s ease, transform 0.2s ease; /* 动画效果 */
+}
+
+.but:hover {
+    background-color: #004646; /* 鼠标悬停时的背景色 */
+    transform: scale(1.05); /* 鼠标悬停时的放大效果 */
+}
+
+.but:active {
+    background-color: #001f1f; /* 按下时的背景色 */
+    transform: scale(0.98); /* 按下时的缩小效果 */
 }
 .name {
 	font-size:1.6rem;
@@ -102,16 +114,16 @@ body {
 	flex-direction:column;
 	align-content: flex-start;
     align-items: flex-start;
-    margin:5px;
+    margin-top: 10px !important;
 }
 .infotitle{
     font-size: 0.6rem;
-    font-weight: 900;
+    font-weight: 500;
     text-align: left;
     display: flex;
     align-items: center;
     margin:5px 0 0 0;
-    padding-bottom:4px;
+    padding-bottom:1px;
 }
 .infoinfo{
     margin:0;
@@ -140,8 +152,9 @@ body {
 
 /* 手机屏幕自适应样式 */
 @media (max-width: 600px) {
-    .banner {
-        font-size: 1.5rem;
+    .area-2-1 {
+        flex-direction: column; /* 垂直排列按钮 */
+        gap: 12px;
     }
 
 }
