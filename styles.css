@@ -1,160 +1,106 @@
-/* 基本样式 */
-* {
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Montserrat, NotoSansSC;
-}
-
-/* 响应式布局 */
-body {
-    margin:0 auto;
-    max-width: 600px;
+.container {
+    max-width: 980px;
     display: flex;
     flex-direction: column;
     align-items: center;
-	justify-content: center;
-    padding: 20px;
-	background-color: #004646;
+    margin: 20px auto;
 }
 
-.banner {
-    max-width: 600px;
-    width: 100%;
-	height: 100%;
-    padding: 0px 0;
-    text-align: center;
-    color: white;
+.card {
+    margin: 10px;
+    padding: 15px 15px 25px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-.content {
-	background-color: #FFF5EB;
-    width: 100%;
-    max-width: 600px;
-    padding: 50px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-/* 页脚样式 */
-.footer {
-    max-width: 800px;
-    margin-top: 10px;
-    padding: 20px;
-    width: 100%;
-    text-align: center;
-    color: #f0f0f0;
-    font-size: 0.7rem;
-}
-
-.hr{
-    width: 100%;
-    margin:20px 0;
-    border:.5px solid #909da3;
-}
-
-
-.area-1{
-	margin:6px 0;
-}
-.area-2{
-    max-width: 600px;
-	margin:6px 0;
-}
-.area-3{
-    margin:6px 0;
-    display: flex;
-	flex-direction: row;
-	align-content: flex-start;
-}
-.area-2-1{
-    margin-top: 30px;
-    display: flex;
-    gap: 10px; /* 按钮之间的间距 */
-    
-}
-.but {
-    padding: 12px 20px;
-    background-color: #004646; /* 按钮背景色 */
-    color: #fff; /* 按钮文字颜色 */
-    border: none;
-    border-radius: 5px; /* 圆角 */
-    font-size: 10px;
+.card-title {
+    font-size: 1.2rem;
     font-weight: bold;
-    cursor: pointer;
-    text-align: center;
-    transition: background-color 0.2s ease, transform 0.2s ease; /* 动画效果 */
+    margin-top: 10px;
 }
 
-.but:hover {
-    background-color: #004646; /* 鼠标悬停时的背景色 */
-    transform: scale(1.05); /* 鼠标悬停时的放大效果 */
+.card-date {
+    font-size: 0.8rem;
+    margin: 5px 0;
+    color: #494949;
 }
 
-.but:active {
-    background-color: #001f1f; /* 按下时的背景色 */
-    transform: scale(0.98); /* 按下时的缩小效果 */
+.card-img-top {
+    max-width: 100%;
+    margin-top: 10px;
+    height: auto;
+    object-fit: cover;
 }
-.name {
-	font-size:1.6rem;
-	font-weight: bolder;
-	color: #276077;
-    margin: 20px 0;
-}
-.title{
-	margin-bottom: 5px;
-}
-.company{
-	font-size:0.7rem;
-	font-weight: 700;
-	color: #276077;
-}
-.info{
-	display: flex;
-	flex-direction:column;
-	align-content: flex-start;
-    align-items: flex-start;
-    margin-top: 10px !important;
-}
-.infotitle{
-    font-size: 0.6rem;
-    font-weight: 500;
-    text-align: left;
+
+.card-info {
     display: flex;
+    flex-direction: row;
+    font-size: 1rem;
+    color: #666;
+}
+
+.card-text {
+    display: flex;
+    margin: 5px 25px 5px 0;
     align-items: center;
-    margin:5px 0 0 0;
-    padding-bottom:1px;
 }
-.infoinfo{
-    margin:0;
-    font-size:1rem;
-    font-weight: 700;
-    color: inherit;
+
+.card-text-view,.card-text-like,.card-text-share,.card-text-watche, .card-text-comment{
+    font-size: 0.8rem;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    content: " ";
+    display: inline-block;
+    vertical-align: middle;
+    background-position: 0 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.card-text-2 {
+    margin-right: 0;
+}
+
+.btn-primary {
+    width: 150px;
+    text-align: center;
+    padding: 5px 15px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #007bff;
+    border: 5px solid #007bff;
+    font-size: 0.8em;
     text-decoration: none;
-    pointer-events: none;
-    cursor: default;
-}
-.addtitle{
-	color: #276077;
-    font-size: 0.6rem;
-    margin-right: 6px;
-	font-weight: 700;	
 }
 
-.addinfo{
-    font-size: 0.7rem;
-}
-.web{
-	font-size:1rem;
-	font-weight: 700;
-	color: #276077;
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
 }
 
-/* 手机屏幕自适应样式 */
-@media (max-width: 600px) {
-    .area-2-1 {
-        flex-direction: column; /* 垂直排列按钮 */
-        gap: 12px;
-    }
-
+.card-text-view::before,.card-text-like::before,.card-text-share::before,.card-text-watche::before, .card-text-comment::before{
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+.card-text-view::before {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E  %3Cg fill='none' fill-rule='evenodd'%3E    %3Cpath d='M0 0h20v20H0z'/%3E    %3Cpath fill='%23B1B2B3' fill-rule='nonzero' d='M10 3.333c4.032 0 6.88 2.863 8.333 6.667-1.415 3.89-4.302 6.667-8.333 6.667-4.031 0-7.066-2.777-8.333-6.667C3.044 6.196 5.968 3.333 10 3.333zm0 1.25c-3.075 0-5.6 2.017-6.966 5.346l-.037.09.03.084c1.214 3.21 3.701 5.214 6.744 5.31l.229.004c3.016 0 5.445-1.862 6.85-5.073l.14-.335-.033-.079c-1.407-3.284-3.787-5.247-6.73-5.343L10 4.583zm0 2.084a3.333 3.333 0 1 1 0 6.666 3.333 3.333 0 0 1 0-6.666zm0 1.25a2.083 2.083 0 1 0 0 4.166 2.083 2.083 0 0 0 0-4.166z'/%3E  %3C/g%3E%3C/svg%3E");
+}
+.card-text-like::before{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E  %3Cg fill='none' fill-rule='evenodd'%3E    %3Cpath d='M0 0h24v24H0z'/%3E    %3Cpath fill='%23B1B2B3' fill-rule='nonzero' d='M12.276 3.034c1.077.157 2.282 1.18 2.282 3.077 0 1.39-.23 2.218-.291 2.868l-.012.159h4.699c.746 0 2.28.92 2.016 2.602-.472 3.011-2.096 6.172-2.33 6.658-.735 1.52-1.86 2.49-2.8 2.593l-.163.009H4.36c-.703 0-1.287-1.049-1.353-1.761L3 19.109v-7.768c0-.867.687-1.534 1.388-1.614l.14-.008h.862s2.393.369 3.438-1.328c.986-1.602 1.01-2.831 1.01-3.995 0-1.164 1.384-1.516 2.438-1.362zm-.9 1.52l-.04.013v.169c-.026 1.662-.26 2.772-1.063 4.16l-.168.282c-.506.821-1.237 1.384-2.104 1.715L8 19.488l-.001.013 7.595.001.083-.002c.352-.039 1.014-.622 1.514-1.562l.267-.539.272-.571c.254-.549.498-1.116.726-1.705.433-1.118.764-2.197.957-3.19.028-.144.053-.286.075-.425a.67.67 0 0 0-.204-.635c-.126-.125-.287-.208-.323-.23l-.007-.005h-6.311l.13-1.8.028-.245.121-.792c.092-.6.136-1.088.136-1.69 0-.9-.415-1.445-.9-1.573l-.098-.02a1.727 1.727 0 0 0-.685.036zm-6.817 6.663l-.028.041a.279.279 0 0 0-.021.04l-.01.043V19.1c.007.08.056.222.125.347l.032.053H6.5a.62.62 0 0 1 0-.012v-8.256a6.21 6.21 0 0 1-.834.015l-.373-.029-.734-.001z'/%3E  %3C/g%3E%3C/svg%3E");
+}
+.card-text-share::before{
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.836 2.498c.22 0 .43.087.587.242l5.976 5.919a.834.834 0 0 1 .075 1.1l-.075.084-5.976 5.92a.833.833 0 0 1-1.42-.593v-2.735c-1.949.156-4.793 1.308-6.273 4.917-.246.599-.85.594-.98-.183-1.04-6.15 2.46-10.323 7.253-11.079V3.332c0-.46.373-.834.833-.834zm.166 1.234l.001 3.213-.844.133c-4.022.634-6.647 3.766-6.59 8.133l.006.239c1.328-2.177 3.557-3.708 6.11-3.99l1.318-.109v3.419l5.573-5.52-5.574-5.518z' fill='color(display-p3 .6941 .698 .702)'/%3E%3C/svg%3E");
+}
+.card-text-watche::before{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E  %3Cg fill='none' fill-rule='evenodd'%3E    %3Cpath d='M0 0h24v24H0z'/%3E    %3Cpath fill='%23B1B2B3' fill-rule='nonzero' d='M10.661 2.801a1.901 1.901 0 0 1 2.55-.115l.128.115 2.536 2.519 3.467.924a1.888 1.888 0 0 1 1.376 2.168l-.033.144-.929 3.439.93 3.441a1.887 1.887 0 0 1-1.2 2.267l-.142.044-3.443.916-2.562 2.536a1.9 1.9 0 0 1-2.55.115l-.128-.115-2.537-2.52-3.466-.923a1.888 1.888 0 0 1-1.376-2.168l.033-.144.928-3.44-.929-3.45a1.887 1.887 0 0 1 1.2-2.267l.142-.043 3.468-.924 2.537-2.519zm1.547 14.17a.399.399 0 0 0-.327-.036l-.078.036-2.069 1.194 1.984 1.97a.4.4 0 0 0 .433.086l.07-.037.062-.05 1.99-1.97-2.065-1.192zM5.49 13.136l-.728 2.699a.385.385 0 0 0 .205.445l.074.028 2.721.724.007-2.376a.385.385 0 0 0-.074-.226l-.054-.06-.065-.046-2.086-1.188zm13.017-.009l-2.075 1.181a.42.42 0 0 0-.194.26l-.009.077.006 2.377 2.724-.724a.39.39 0 0 0 .286-.32l.004-.075-.013-.076-.729-2.7zm-3.773-5.831l-1.782 1.03a1.875 1.875 0 0 1-1.752.082l-.148-.079-1.79-1.033.007 2.05c0 .62-.307 1.2-.819 1.56l-.132.085-1.783 1.014 1.78 1.013c.544.307.896.866.947 1.485l.007.155-.006 2.047 1.783-1.029a1.89 1.89 0 0 1 1.757-.082l.153.079 1.779 1.027-.006-2.053a1.9 1.9 0 0 1 .82-1.551l.131-.085 1.782-1.015-1.779-1.012a1.881 1.881 0 0 1-.947-1.485l-.007-.155.005-2.048zm-6.972-.327l-2.723.726a.388.388 0 0 0-.29.395l.013.076.729 2.707 2.075-1.18a.419.419 0 0 0 .168-.185l.026-.079.009-.081-.007-2.379zm8.473 0l-.006 2.377c0 .11.048.214.128.285l.065.047 2.085 1.187.729-2.698a.385.385 0 0 0-.14-.404l-.065-.04-.074-.029-2.722-.725zm-3.954-3.102a.401.401 0 0 0-.501-.05l-.063.05-1.984 1.968 2.075 1.199c.07.041.152.058.232.049l.08-.018.076-.035 2.068-1.195-1.983-1.968z'/%3E  %3C/g%3E%3C/svg%3E");
+}
+.card-text-comment::before{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E  %3Cg fill='none' fill-rule='evenodd'%3E    %3Cpath d='M0 0h20v20H0z'/%3E    %3Cpath fill='%23576B95' fill-rule='nonzero' d='M10 2.917c4.295 0 7.917 2.932 7.917 6.752 0 3.819-3.622 6.752-7.917 6.752-.486 0-.967-.038-1.44-.111l-.352-.063-.27-.059-2.52.844a.99.99 0 0 1-1.304-.942l.005-.1.173-1.637-.081-.071c-1.217-1.11-1.97-2.548-2.106-4.105L2.09 9.93l-.006-.261c0-3.82 3.622-6.752 7.917-6.752zm0 1.25c-3.638 0-6.548 2.381-6.663 5.295l-.004.179.003.207.015.22c.1 1.147.629 2.233 1.506 3.105l.18.171.566.499-.2 1.875 2.467-.825.555.123.328.059c.41.063.826.096 1.247.096 3.712 0 6.667-2.48 6.667-5.502 0-3.023-2.955-5.502-6.667-5.502z'/%3E  %3C/g%3E%3C/svg%3E");
 }
